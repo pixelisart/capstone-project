@@ -17,6 +17,14 @@
   <body>
     {{content-for "body"}}
 
+    <script>
+        function mapError() {
+            alert("Error loading Google Maps");
+        }
+    </script>
+    <script src=
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAekM9XVEMmw0oWbPws8F5T-4WsCNB9Tw0&libraries=geometry&v=3" onerror="mapError()">
+    </script>
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/capstone-project.js"></script>
 
