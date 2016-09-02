@@ -25,6 +25,7 @@ export default Ember.Component.extend({
             self.userLong = -122.2581727;
             self.set('long', self.userLong);
             self.getFormattedAddress();
+            console.log(err);
         }
         if ('geolocation' in navigator) {
             navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
@@ -68,22 +69,41 @@ export default Ember.Component.extend({
             url: 'https://api.foursquare.com/v2/venues/search?client_id=IY4MOF0VN0HHCOSRH121TJYN1P3FTVZRNCX2RU1YNF23GRBH&client_secret=O0GFJPKBRBDYSO4M52SRJBINZLFWVF4DLPNYZ3WH5NOIYVKW&v=20130815&ll=' + self.userLat + ',' + self.userLong + '&query=pizza&limit=5',
             dataType: 'json',
             success: function(response) {
+                self.pizzaPlaces = [];
                 var foundPlaces = response.response.venues;
                 if (foundPlaces.length > 0) {
                     for (var i = 0; i < foundPlaces.length; i++) {
                         self.pizzaPlaces.push({
                             'name': foundPlaces[i].name,
                             'address': foundPlaces[i].location.formattedAddress[0] + ', ' + foundPlaces[i].location.formattedAddress[1],
-                            'phone': foundPlaces[i].contact.formattedPhone
+                            'formattedPhone': foundPlaces[i].contact.formattedPhone,
+                            'phone': foundPlaces[i].contact.phone
                         });
 
                     }
-                    console.log(self.pizzaPlaces);
+                    self.set('places', self.pizzaPlaces);
+                }
+                else {
+                    self.pizzaPlaces.push({
+                        'name': 'Uh oh',
+                        'address': 'Pizza?',
+                        'formattedPhone': "We couldn't find nearby pizza!",
+                        'phone': ''
+                    });
+                    self.set('places', self.pizzaPlaces);
                 }
 
             },
-            error: function(error) {
-
+            error: function(err) {
+                self.pizzaPlaces = [];
+                self.pizzaPlaces.push({
+                    'name': 'Uh oh',
+                    'address': 'Pizza?',
+                    'formattedPhone': "We couldn't find nearby pizza!",
+                    'phone': ''
+                });
+                self.set('places', self.pizzaPlaces);
+                console.log(err);
             }
         });
 

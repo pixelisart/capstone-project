@@ -11,4 +11,14 @@
     <li><strong>Formatted Address: </strong>{{address}}</li>
 </ul>
 
+<p>Results will be shown below once available:</p>
+
+{{#each places as |place|}}
+<ul class='pizza-list'>
+    <li><strong>{{place.name}}</strong></li>
+    <li>{{place.address}}</li>
+    <li><a href='tel:{{place.phone}}'>{{place.formattedPhone}}</a></li>
+</ul>
+{{/each}}
+
 {{yield}}
