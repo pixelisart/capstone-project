@@ -1,3 +1,42 @@
+body {
+    padding: 80px 15px 15px 15px;
+}
+
+#ember358 {
+    color: white;
+}
+
+.location-list-item {
+    list-style-type: none;
+}
+
 .pizza-list-item {
     list-style-type: none;
+}
+
+/* Extra small devices (phones, less than 768px)
+   No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  body {
+    width: 768px;
+    margin: auto;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    body {
+        width: 992px;
+        margin: auto;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    body {
+        width: 1200px;
+        margin: auto;
+    }
 }
