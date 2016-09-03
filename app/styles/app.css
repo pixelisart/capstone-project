@@ -2,7 +2,7 @@ body {
     padding: 80px 15px 15px 15px;
 }
 
-#ember358 {
+a.ember-view.active {
     color: white;
 }
 
