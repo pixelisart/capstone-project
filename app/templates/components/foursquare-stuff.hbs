@@ -15,9 +15,9 @@
 
 {{#each places as |place|}}
 <ul class='pizza-list'>
-    <li><strong>{{place.name}}</strong></li>
-    <li>{{place.address}}</li>
-    <li><a href='tel:{{place.phone}}'>{{place.formattedPhone}}</a></li>
+    <li class='pizza-list-item'><strong>{{place.name}}</strong></li>
+    <li class='pizza-list-item'>{{place.address}}</li>
+    <li class='pizza-list-item'><a href='tel:+1{{place.phone}}'>{{place.formattedPhone}}</a></li>
 </ul>
 {{/each}}
 
