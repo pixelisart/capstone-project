@@ -1,9 +1,12 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-        <p id='brand-name' class="navbar-brand" href="#">Pizza Finder</p>
+        <p id='brand-name' class="navbar-brand">Pizza Finder</p>
     </div>
-    <p class='navbar-text my-nav-links'>{{#link-to 'index'}}Home{{/link-to}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{#link-to 'about'}}About Pizza Finder{{/link-to}}</p>
+    <p class='navbar-text my-nav-links'>
+        <span>{{#link-to 'index'}}Home{{/link-to}}</span>
+        <span class='blank-space'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span>{{#link-to 'about'}}About Pizza Finder{{/link-to}}</span></p>
   </div>
 </nav>
 

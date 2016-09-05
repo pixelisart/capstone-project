@@ -12,6 +12,10 @@ main {
     font-size: 30px;
 }
 
+.blank-space {
+    color: black;
+}
+
 p a {
     color: black;
 }
