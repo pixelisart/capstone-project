@@ -69,8 +69,15 @@ export default Ember.Component.extend({
             },
             error: function(err) {
                 console.log(err);
-                self.userFormattedAddress = 'Error formatting address. If offline, results will be unavailable.';
-                self.set('address', self.userFormattedAddress);
+                if (navigator.onLine) {
+                    self.userFormattedAddress = 'Error formatting address';
+                    self.set('address', self.userFormattedAddress);
+                }
+                else {
+                    self.userFormattedAddress = 'Address lookup unavailable';
+                    self.set('address', self.userFormattedAddress);
+                    self.initFS();
+                }
             }
         });
     },
@@ -98,7 +105,7 @@ export default Ember.Component.extend({
                     self.pizzaPlaces.push({
                         'name': 'Uh oh',
                         'address': 'Pizza?',
-                        'formattedPhone': "We couldn't find nearby pizza!",
+                        'formattedPhone': "We couldn't find nearby pizza! Clicking this won't call anywhere.",
                         'phone': ''
                     });
                     self.set('places', self.pizzaPlaces);
@@ -110,7 +117,7 @@ export default Ember.Component.extend({
                 self.pizzaPlaces.push({
                     'name': 'Uh oh',
                     'address': 'Pizza?',
-                    'formattedPhone': "We couldn't find nearby pizza!",
+                    'formattedPhone': "We couldn't find nearby pizza! Clicking this won't call anywhere.",
                     'phone': ''
                 });
                 self.set('places', self.pizzaPlaces);
