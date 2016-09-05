@@ -69,6 +69,8 @@ export default Ember.Component.extend({
             },
             error: function(err) {
                 console.log(err);
+                self.userFormattedAddress = 'Error formatting address. If offline, results will be unavailable.';
+                self.set('address', self.userFormattedAddress);
             }
         });
     },
