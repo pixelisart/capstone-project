@@ -5,6 +5,11 @@
     <p><strong>Lookup will take a few seconds after you allow access.</strong></p>
     <p>This site will default to the address of Peet's coffee in Berkeley, CA if location access is not allowed.</p>
 
+    <br>
+    <button class='btn btn-default' id='launchLoc'>Find location</button>
+    <br>
+    <br>
+
     <ul class='location-list'>
         <br>
         <li class='location-list-item'><strong>Latitude:</strong> {{lat}}</li>
@@ -14,12 +19,14 @@
     </ul>
 
     <p>Results will be shown below once available:</p>
+    <br>
 
     {{#each places as |place|}}
     <ul class='pizza-list'>
         <li class='pizza-list-item'><strong>{{place.name}}</strong></li>
         <li class='pizza-list-item'>{{place.address}}</li>
-        <li class='pizza-list-item'><a href='tel:+1{{place.phone}}'>Tap/click to dial: {{place.formattedPhone}}</a></li>
+        <li class='pizza-list-item'><a class='tel-link' href='tel:+1{{place.phone}}'><strong>Tap/click this text to dial: {{place.formattedPhone}}</strong></a></li>
+        <br>
     </ul>
     {{/each}}
 </main>

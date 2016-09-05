@@ -1,9 +1,19 @@
 body {
-    padding: 80px 15px 15px 15px;
+    padding: 15px 15px 15px 15px;
 }
 
-a.ember-view.active {
-    color: white;
+main {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#brand-name {
+    color: black;
+    font-size: 30px;
+}
+
+p a {
+    color: black;
 }
 
 .location-list-item {
@@ -14,6 +24,14 @@ a.ember-view.active {
     list-style-type: none;
 }
 
+.tel-link {
+    color: black;
+}
+
+.my-nav-links {
+    font-size: 20px;
+    vertical-align: middle;
+}
 /* Extra small devices (phones, less than 768px)
    No media query since this is the default in Bootstrap */
 
@@ -23,6 +41,10 @@ a.ember-view.active {
     width: 768px;
     margin: auto;
   }
+
+  #brand-name {
+      font-size: 35px;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -31,6 +53,10 @@ a.ember-view.active {
         width: 992px;
         margin: auto;
     }
+
+    #brand-name {
+        font-size: 35px;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -38,5 +64,9 @@ a.ember-view.active {
     body {
         width: 1200px;
         margin: auto;
+    }
+
+    #brand-name {
+        font-size: 35px;
     }
 }

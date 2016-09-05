@@ -1,12 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    userLat: 'loading...',
-    userLong: 'loading...',
-    userFormattedAddress: 'loading...',
+    userLat: 'Waiting for button click',
+    userLong: 'Waiting for button click',
+    userFormattedAddress: 'Waiting for button click',
     pizzaPlaces: [],
+    setInitialLocText: function() {
+        var self = this;
+        self.set('lat', self.userLat);
+        self.set('long', self.userLong);
+        self.set('address', self.userFormattedAddress);
+    },
     getUserLoc: function() {
         var self = this;
+        self.userLat = 'Loading...';
+        self.userLong = 'Loading...';
+        self.userFormattedAddress = 'Loading...';
         self.set('lat', self.userLat);
         self.set('long', self.userLong);
         self.set('address', self.userFormattedAddress);
@@ -109,6 +118,13 @@ export default Ember.Component.extend({
 
     },
     didInsertElement() {
-        this.getUserLoc();
+        var self = this;
+        self.setInitialLocText();
+        Ember.$('#launchLoc').click(function() {
+            self.getUserLoc();
+        });
+    },
+    didDestroyElement() {
+        Ember.$('#launchLoc').off('click', '#launchLoc');
     }
 });
