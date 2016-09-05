@@ -1,7 +1,15 @@
-# Capstone-project
+# Pizza Finder
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a nice little app to help you find pizza near your location. Please allow location access when the app requests it.
+
+One thing to note: This is a front-end project, so the email sign-up in the 'about' route isn't saving/storing your email. Your GPS coordinates do get sent to the Google Maps and Foursquare APIs to provide pizza lookup services.
+
+To run this app, you can follow the instructions below this section, but here is a quick summary:
+
+* Follow the instructions in "Prerequisites" and "Installation"
+* When you get to the "Running / Development" instructions, do the following instead of 'ember serve':
+    * ember serve --environment=production
+    * The above command will build a production ready version of Pizza Finder with minified files and offline first functionality.
 
 ## Prerequisites
 
