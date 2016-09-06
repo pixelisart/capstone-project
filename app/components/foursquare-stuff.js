@@ -104,8 +104,8 @@ export default Ember.Component.extend({
                 else {
                     self.pizzaPlaces.push({
                         'name': 'Uh oh',
-                        'address': 'Pizza?',
-                        'formattedPhone': "We couldn't find nearby pizza! Clicking this won't call anywhere.",
+                        'address': "Pizza? Sorry, we couldn't find pizza!",
+                        'formattedPhone': "Clicking this won't call anywhere.",
                         'phone': ''
                     });
                     self.set('places', self.pizzaPlaces);
@@ -116,8 +116,8 @@ export default Ember.Component.extend({
                 self.pizzaPlaces = [];
                 self.pizzaPlaces.push({
                     'name': 'Uh oh',
-                    'address': 'Pizza?',
-                    'formattedPhone': "We couldn't find nearby pizza! Clicking this won't call anywhere.",
+                    'address': "Pizza? Sorry, we couldn't find pizza!",
+                    'formattedPhone': "Clicking this won't call anywhere.",
                     'phone': ''
                 });
                 self.set('places', self.pizzaPlaces);
