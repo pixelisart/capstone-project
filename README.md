@@ -1,5 +1,8 @@
 # Pizza Finder
 
+You can view this app live:
+https://rubalcava.github.io/capstone-project/
+
 This is a nice little app to help you find pizza near your location. Please allow location access when the app requests it.
 
 One thing to note: This is a front-end project, so the email sign-up in the 'about' route isn't saving/storing your email. Your GPS coordinates do get sent to the Google Maps and Foursquare APIs to provide pizza lookup services.
@@ -10,6 +13,10 @@ To run this app, you can follow the instructions below this section, but here is
 * When you get to the "Running / Development" instructions, do the following instead of 'ember serve':
     * ember serve --environment=production
     * The above command will build a production ready version of Pizza Finder with minified files and offline first functionality.
+
+## Current Issues
+
+* When using the app via GitHub pages, going offline and then clicking reload isn't keeping the offline functionality. However, if you go offline and then go back to the address bar and hit enter like you're typing the address in again, the service worker functions as intended. It's a quirk with the Ember add-on broccoli-serviceworker. I'm figuring it out and will update once it's fixed.
 
 ## Prerequisites
 
