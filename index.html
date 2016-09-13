@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizza Finder</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="capstone-project/config/environment" content="%7B%22modulePrefix%22%3A%22capstone-project%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/capstone-project/%22%2C%22locationType%22%3A%22hash%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22capstone-project%22%2C%22version%22%3A%220.0.0+cf54bd1b%22%7D%2C%22serviceWorker%22%3A%7B%22enabled%22%3Atrue%2C%22debug%22%3Atrue%2C%22precacheURLs%22%3A%5B%22https%3A//rubalcava.github.io/capstone-project/index.html%22%2C%22https%3A//rubalcava.github.io/capstone-project/assets/%22%2C%22https%3A//rubalcava.github.io/capstone-project/crossdomain.xml%22%2C%22https%3A//rubalcava.github.io/capstone-project/robots.txt%22%2C%22https%3A//rubalcava.github.io/capstone-project/service-worker-6039bad7a1034d583b0e3edf6edbb9f3.js%22%2C%22https%3A//rubalcava.github.io/capstone-project/sw-toolbox-cd4c7713eff654a1f12e84e5c95d771f.js%22%2C%22https%3A//rubalcava.github.io/capstone-project/sw-toolbox.map%22%5D%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+
+    <link rel="stylesheet" href="/capstone-project/assets/vendor-1148a0ca383f043a219bddec84251895.css">
+    <link rel="stylesheet" href="/capstone-project/assets/capstone-project-76e712d2b6b314842deda52e10396e99.css">
+
+    
+  </head>
+  <body>
+    
+
+    <script>
+        function mapError() {
+            alert("Error loading the Google Maps API. You may be offline.");
+        }
+    </script>
+    <script src=
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyAekM9XVEMmw0oWbPws8F5T-4WsCNB9Tw0&libraries=geometry&v=3" onerror="mapError()">
+    </script>
+    <script src="/capstone-project/assets/vendor-9028863881e4268c5e52903652fb8a01.js"></script>
+    <script src="/capstone-project/assets/capstone-project-662d5aaeda960ec437317462c645a263.js"></script>
+
+    <script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker-3880a5978c67dd2828084080fed047c7.js', {scope: './'})
+    .catch(function(error) {
+      console.error('Error registering service worker:'+error);
+    });
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      window.location.reload();
+    });
+} else {
+  console.log('service worker not supported');
+}
+</script>
+  </body>
+</html>
